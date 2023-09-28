@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@make-software/csprclick-react": "^0.6.2",
-    "@make-software/csprclick-types": "^0.6.1",
-    "@make-software/csprclick-web-sdk": "^0.6.1",
+    "@make-software/csprclick-react": "^0.7.2",
+    "@make-software/csprclick-types": "^0.7.1",
+    "@make-software/csprclick-web-sdk": "^0.7.1",
+    "styled-components": "^5.3.9",
     "@metamask/safe-event-emitter": "^2.0.0",
     "@types/node": "^16.18.54",
     "@types/react": "^18.2.23",

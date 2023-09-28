@@ -17,6 +17,7 @@ const clickOptions: CsprClickInitOptions = {
         'casper-signer',
     ],
     appId: 'csprclick-template',
+    csprclickHost: 'https://casper-click-static.dev.make.services',
 };
 
 const root = ReactDOM.createRoot(
