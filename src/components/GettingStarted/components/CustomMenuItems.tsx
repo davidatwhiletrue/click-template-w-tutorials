@@ -36,6 +36,19 @@ function CustomMenuItems() {
                     </code>
                 </pre>
             </SectionContainer>
+            <SectionContainer background={'unset'}>
+                <span>
+                    Now, add the items to the <code>&lt;ClickTopBar&gt;</code> component:
+                </span>
+            </SectionContainer>
+            <SectionContainer>
+				<pre>
+					<code className={'language-javascript'}>
+						{`<ClickTopBar accountMenuItems={accountMenuItems} />
+`}
+                    </code>
+                </pre>
+            </SectionContainer>
         </>
     )
 }
