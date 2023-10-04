@@ -1,24 +1,24 @@
 html {
-  font-size: 16px;
-  box-sizing: border-box;
-  overflow-y: visible;
-  background: #282c34;
+	font-size: 16px;
+	box-sizing: border-box;
+	overflow-y: visible;
+	background: #282c34;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 @supports (font-variation-settings: normal) {
-  body {
-    font-family: "Inter var", sans-serif;
-  }
+	body {
+		font-family: 'Inter var', sans-serif;
+	}
 }
 
 body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-weight: normal;
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
 }

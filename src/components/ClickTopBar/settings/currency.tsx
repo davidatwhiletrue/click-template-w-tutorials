@@ -1,4 +1,4 @@
-import {Currency, CurrencyType} from "@make-software/csprclick-react";
+import { Currency, CurrencySettings, CurrencyType } from '@make-software/csprclick-react';
 
 export const CURRENCIES: Currency[] = [
 	{
@@ -55,7 +55,6 @@ export const CURRENCIES: Currency[] = [
 		code: 'ARS',
 		title: 'Argentine Peso',
 		type_id: CurrencyType.FIAT,
-
 	},
 	{
 		code: 'AUD',
@@ -142,5 +141,5 @@ export const currencySettings = (currency: Currency, setCurrency: (c: Currency) 
 			console.log(`Switched currency to ${c.code}`);
 		},
 		currentCurrency: currency,
-	}
-}
+	} as CurrencySettings;
+};
