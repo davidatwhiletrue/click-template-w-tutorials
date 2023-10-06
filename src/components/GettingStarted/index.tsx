@@ -5,6 +5,7 @@ import Account from './components/Account';
 import BuyMeACoffee from './components/BuyMeACoffee';
 import CustomMenuItems from "./components/CustomMenuItems";
 import {SectionContainer} from "./components";
+import UseClickRefHook from "./components/UseClickRefHook";
 
 const AccountInfoContainer = styled.div(({ theme }) =>
 	theme.withMedia({
@@ -29,6 +30,8 @@ export const GettingStarted = ({ account }: GettingStartedProps) => {
 					you&apos;ll use often.
 				</span>
 			</SectionContainer>
+			<h3>🪝️ useClickRef hook</h3>
+			<UseClickRefHook />
 			<h3>🆔 Get your user´s account and update your app</h3>
 			<Account />
 			<h3>🔧 Customize the account menu</h3>

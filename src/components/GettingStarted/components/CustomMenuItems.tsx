@@ -1,8 +1,13 @@
 import React from "react";
 import { SectionContainer } from "./SectionContainer";
+import Prism from "prismjs";
 
 
 function CustomMenuItems() {
+    React.useEffect(() => {
+        Prism.highlightAll();
+    }, []);
+
     return (
         <>
             <SectionContainer background={'unset'}>
@@ -43,7 +48,7 @@ function CustomMenuItems() {
             </SectionContainer>
             <SectionContainer>
 				<pre>
-					<code className={'language-javascript'}>
+					<code className={'language-markup'}>
 						{`<ClickTopBar accountMenuItems={accountMenuItems} />
 `}
                     </code>
