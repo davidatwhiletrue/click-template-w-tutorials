@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { useClickRef, ThemeModeType } from '@make-software/csprclick-react';
+import { useClickRef, ThemeModeType } from '@make-software/csprclick-ui';
 import ClickTopBar from './components/ClickTopBar';
 import GettingStarted from './components/GettingStarted';
 import Container from './components/container';

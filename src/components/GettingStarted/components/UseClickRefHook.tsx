@@ -18,7 +18,7 @@ export const UseClickRefHook = () => {
 			<Section>
 				<pre>
 					<code className={'language-javascript'}>
-						{`import { useClickRef } from '@make-software/csprclick-react';
+						{`import { useClickRef } from '@make-software/csprclick-ui';
 
 function MyComponent() {
   const clickRef = useClickRef();

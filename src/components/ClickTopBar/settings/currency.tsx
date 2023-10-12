@@ -1,4 +1,4 @@
-import { Currency, CurrencySettings, CurrencyType } from '@make-software/csprclick-react';
+import { Currency, CurrencySettings, CurrencyType } from '@make-software/csprclick-ui';
 
 export const CURRENCIES: Currency[] = [
 	{

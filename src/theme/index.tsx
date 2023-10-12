@@ -1,4 +1,4 @@
-import { CsprClickThemes } from '@make-software/csprclick-react';
+import { CsprClickThemes } from '@make-software/csprclick-ui';
 
 export const AppTheme = {
     dark: {

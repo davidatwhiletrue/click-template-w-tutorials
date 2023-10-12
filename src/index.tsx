@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { CsprClickInitOptions } from '@make-software/csprclick-web-sdk';
-import { ClickProvider } from '@make-software/csprclick-react';
-import { CONTENT_MODE } from '@make-software/csprclick-types';
+import { CsprClickInitOptions } from '@make-software/csprclick-core-client';
+import { ClickProvider } from '@make-software/csprclick-ui';
+import { CONTENT_MODE } from '@make-software/csprclick-core-types';
 import App from './App';
 
 const clickOptions: CsprClickInitOptions = {

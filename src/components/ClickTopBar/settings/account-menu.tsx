@@ -1,4 +1,4 @@
-import { AccountMenuItem, CopyHashMenuItem, ViewAccountOnExplorerMenuItem } from '@make-software/csprclick-react';
+import { AccountMenuItem, CopyHashMenuItem, ViewAccountOnExplorerMenuItem } from '@make-software/csprclick-ui';
 import CSPRClickIcon from '../../../logo.svg';
 
 export const accountMenuItems = [

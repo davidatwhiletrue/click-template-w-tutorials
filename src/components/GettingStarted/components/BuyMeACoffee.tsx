@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Section } from './Section';
-import { useClickRef } from '@make-software/csprclick-react';
-import { SendResult } from '@make-software/csprclick-web-sdk';
+import { useClickRef } from '@make-software/csprclick-ui';
+import { SendResult } from '@make-software/csprclick-core-client';
 import makeTransferDeploy from './transfer-deploy';
 import Prism from 'prismjs';
 

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Section } from './Section';
-import { useClickRef } from '@make-software/csprclick-react';
+import { useClickRef } from '@make-software/csprclick-ui';
 import Prism from 'prismjs';
 
 const UserAccount = () => {

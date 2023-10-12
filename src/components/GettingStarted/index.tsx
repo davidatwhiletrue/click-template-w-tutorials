@@ -1,5 +1,5 @@
 import React from 'react';
-import { useClickRef } from '@make-software/csprclick-react';
+import { useClickRef } from '@make-software/csprclick-ui';
 import { Account, BuyMeACoffee, CustomMenuItems, Section, UseClickRefHook } from './components';
 import Container from '../container';
 

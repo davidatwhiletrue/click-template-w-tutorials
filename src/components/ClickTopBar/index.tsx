@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ClickTopBar, Lang, ThemeModeType } from '@make-software/csprclick-react';
+import { ClickTopBar, Lang, ThemeModeType } from '@make-software/csprclick-ui';
 import {
 	accountMenuItems,
 	CURRENCIES,

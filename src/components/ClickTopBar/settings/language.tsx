@@ -1,4 +1,4 @@
-import { Lang, LanguageSettings } from '@make-software/csprclick-react';
+import { Lang, LanguageSettings } from '@make-software/csprclick-ui';
 
 export const LANGUAGES: Lang[] = [
 	Lang.EN,
