@@ -1,28 +1,25 @@
 import styled from 'styled-components';
 
-export const SectionContainer = styled.div<{ background?: string }>(({ theme, background }) =>
+export const Section = styled.div<{ border?: boolean }>(({ theme, border }) =>
 	theme.withMedia({
 		display: 'flex',
 		flexDirection: 'column',
-		padding: '12px',
-		backgroundColor: background || theme.styleguideColors.fillSecondaryBlueHover,
+		backgroundColor: 'unset',
 		width: '100%',
 		margin: '0 0 24px',
+		padding: border ? '8px' : 0,
+		border: border ? `1px solid` : 'none',
+		borderColor: theme.contentPrimary,
 		h2: {
 			margin: '0 0 16px',
-			fontSize: '24px',
-			fontWeight: '700',
-			color: theme.styleguideColors.contentPrimary,
+			color: theme.contentPrimary,
 			span: {
-				fontFamily: theme.typography.fontFamily.mono,
 				fontWeight: '300',
 				marginLeft: '16px',
 			},
 		},
 		h3: {
 			margin: '0 0 16px',
-			fontSize: '20px',
-			fontWeight: '500',
 			color: theme.styleguideColors.contentPrimary,
 			span: {
 				fontFamily: theme.typography.fontFamily.mono,
@@ -33,8 +30,6 @@ export const SectionContainer = styled.div<{ background?: string }>(({ theme, ba
 		h5: {
 			margin: '0',
 			fontFamily: theme.typography.fontFamily.mono,
-			fontSize: '14px',
-			fontWeight: '300',
 			color: theme.styleguideColors.contentPrimary,
 		},
 		span: {
@@ -44,10 +39,9 @@ export const SectionContainer = styled.div<{ background?: string }>(({ theme, ba
 				textDecoration: 'none',
 				fontWeight: '700',
 			},
-			"&:last-child": {
+			'&:last-child': {
 				marginBottom: '0',
-
-			}
+			},
 		},
 		table: {
 			marginLeft: '30px',

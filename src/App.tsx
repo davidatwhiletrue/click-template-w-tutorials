@@ -1,49 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { ThemeModeType } from '@make-software/csprclick-react';
-import { useClickRef } from '@make-software/csprclick-react';
-import ClickTopBar, { AppTheme } from './components/ClickTopBar';
-import { GettingStarted } from './components/GettingStarted';
-import './App.css';
+import { useClickRef, ThemeModeType } from '@make-software/csprclick-react';
+import ClickTopBar from './components/ClickTopBar';
+import GettingStarted from './components/GettingStarted';
+import Container from './components/container';
+import { AppTheme } from "./theme";
 
-const Container = styled.div(({ theme }) =>
+const AppContainer = styled(Container)(({ theme }) =>
 	theme.withMedia({
-		display: 'flex',
-		flexDirection: 'column',
-		width: '100%',
-		maxWidth: ['540px', '720px', '960px'],
-		margin: '0 auto',
-	})
-);
-
-const AppContainer = styled.div(({ theme }) =>
-	theme.withMedia({
-		width: '100%',
 		maxWidth: ['540px', '720px', '960px'],
 		padding: '0 12px',
 		margin: '0 auto',
 		minHeight: '100vh',
-		display: 'flex',
-		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
-		color: theme.styleguideColors.contentPrimary,
-		h3: { fontSize: 'calc(12px + 2vmin)', fontWeight: 'regular' },
-		h5: { fontSize: 'calc(10px + 2vmin)', fontWeight: '300', textAlign: 'center' },
-		a: {
-			color: theme.reactTemplateColor,
-		},
+	})
+);
+
+const GettingStartedContainer = styled.div(({ theme }) =>
+	theme.withMedia({
+		maxWidth: ['540px', '720px', '960px'],
+		padding: '0 12px',
+		margin: '0 auto',
 	})
 );
 
 export const StyledSvgIcon = styled.div(({ theme }) =>
 	theme.withMedia({
-		height: '30vmin !important',
-		width: '30vmin !important',
 		svg: {
-			height: '30vmin',
-			width: '30vmin',
-			path: { stroke: theme.reactTemplateColor, fill: 'none' },
+			height: '92px',
+			width: '92px',
+			path: { fill: theme.clickLogo },
 		},
 	})
 );
@@ -51,7 +38,7 @@ export const StyledSvgIcon = styled.div(({ theme }) =>
 const App = () => {
 	const clickRef = useClickRef();
 	const [themeMode, setThemeMode] = useState<ThemeModeType>(ThemeModeType.dark);
-	const [activeAccount, setActiveAccount] = React.useState<any>(null);
+	const [activeAccount, setActiveAccount] = useState<any>(null);
 
 	useEffect(() => {
 		clickRef?.on('csprclick:signed_in', async (evt: any) => {
@@ -68,13 +55,19 @@ const App = () => {
 		});
 	}, [clickRef?.on]);
 
+	const handleReadMore = () => {
+		const gettingStartedContainer = document.getElementById('getting-started');
+		// eslint-disable-next-line no-debugger
+		gettingStartedContainer?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	};
 	return (
 		<ThemeProvider theme={AppTheme[themeMode]}>
-			<ClickTopBar />
+			<ClickTopBar
+				themeMode={themeMode}
+				onThemeSwitch={() => setThemeMode(themeMode === ThemeModeType.light ? ThemeModeType.dark : ThemeModeType.light)}
+			/>
 			<Container>
-				{activeAccount ? (
-					<GettingStarted account={activeAccount} />
-				) : (
+				{!activeAccount && (
 					<AppContainer>
 						<StyledSvgIcon className='App-logo'>
 							<svg width='86' height='88' viewBox='0 0 86 88' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -91,10 +84,13 @@ const App = () => {
 							the next web3 killer app 🚀
 						</h5>
 						<h5>
-							Learn more <a href='/docs'>CSPR.click docs</a>
+							<a onClick={handleReadMore}>Read more 👇</a>
 						</h5>
 					</AppContainer>
 				)}
+				<GettingStartedContainer id={'getting-started'}>
+					<GettingStarted />
+				</GettingStartedContainer>
 			</Container>
 		</ThemeProvider>
 	);

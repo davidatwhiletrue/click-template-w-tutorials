@@ -1,6 +1,5 @@
-export * from './settings';
+import { useState } from 'react';
 import { ClickTopBar, Lang, ThemeModeType } from '@make-software/csprclick-react';
-import React, { useState } from 'react';
 import {
 	accountMenuItems,
 	CURRENCIES,
@@ -10,12 +9,11 @@ import {
 	networkSettings,
 } from './settings';
 import styled from 'styled-components';
+export * from './settings';
 
-const TopBarSection = styled.section(({ theme }) =>
-	theme.withMedia({
-		backgroundColor: theme.styleguideColors.backgroundTertiary,
-	})
-);
+const TopBarSection = styled.section(({ theme }) => ({
+	backgroundColor: theme.topBarBackground,
+}));
 
 const TopBarContainer = styled.div(({ theme }) =>
 	theme.withMedia({
@@ -27,20 +25,22 @@ const TopBarContainer = styled.div(({ theme }) =>
 	})
 );
 
-const TopBar = () => {
+export interface TopBarProps {
+	themeMode: ThemeModeType | undefined;
+	onThemeSwitch: () => void;
+}
+
+const TopBar = ({ themeMode, onThemeSwitch }: TopBarProps) => {
 	const [lang, setLang] = useState<Lang>(Lang.EN);
 	const [currency, setCurrency] = useState(CURRENCIES[0]);
 	const [network, setNetwork] = useState<string>(NETWORKS[1]);
-	const [themeMode, setThemeMode] = useState<ThemeModeType>(ThemeModeType.dark);
 
 	return (
 		<TopBarSection>
 			<TopBarContainer>
 				<ClickTopBar
-					onThemeSwitch={() =>
-						setThemeMode(themeMode === ThemeModeType.light ? ThemeModeType.dark : ThemeModeType.light)
-					}
 					themeMode={themeMode}
+					onThemeSwitch={onThemeSwitch}
 					accountMenuItems={accountMenuItems}
 					languageSettings={languageSettings(lang, setLang)}
 					currencySettings={currencySettings(currency, setCurrency)}

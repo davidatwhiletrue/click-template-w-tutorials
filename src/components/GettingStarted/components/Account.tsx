@@ -1,8 +1,7 @@
-import * as React from 'react';
-import { SectionContainer } from './SectionContainer';
+import { useEffect } from 'react';
+import { Section } from './Section';
 import { useClickRef } from '@make-software/csprclick-react';
 import Prism from 'prismjs';
-import '../../../prism.css';
 
 const UserAccount = () => {
 	const clickRef = useClickRef();
@@ -23,21 +22,21 @@ const UserAccount = () => {
 	);
 };
 
-const Account = () => {
-	React.useEffect(() => {
+export const Account = () => {
+	useEffect(() => {
 		Prism.highlightAll();
 	}, []);
 
 	return (
 		<>
-			<SectionContainer background={'unset'}>
+			<Section>
 				<span>
 					Use the <code>useClickRef()</code> hook to get a reference to the CSPR.click SDK instance. Then, get the
-					user&apos;s active account which will contain information you may need in your application like the public key and
-					the provider.
+					user&apos;s active account which will contain information you may need in your application like the public key
+					and the provider.
 				</span>
-			</SectionContainer>
-			<SectionContainer>
+			</Section>
+			<Section>
 				<pre>
 					<code className={'language-javascript'}>
 						{`const UserAccount = () => {
@@ -51,12 +50,10 @@ const Account = () => {
     )`}
 					</code>
 				</pre>
-			</SectionContainer>
-			<SectionContainer>
+			</Section>
+			<Section border={true}>
 				<UserAccount />
-			</SectionContainer>
+			</Section>
 		</>
 	);
 };
-
-export default Account;
