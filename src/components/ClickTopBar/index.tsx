@@ -22,6 +22,7 @@ const TopBarContainer = styled.div(({ theme }) =>
 		width: '100%',
 		maxWidth: ['540px', '720px', '960px'],
 		margin: '0 auto',
+		padding: '0 12px',
 	})
 );
 

@@ -1,6 +1,14 @@
 import { useEffect } from 'react';
+import styled from 'styled-components';
 import { Section } from './Section';
 import Prism from 'prismjs';
+import AccountMenu from './../../../../src/account-menu.jpg';
+
+const AccountMenuExample = styled.img(({theme}) =>
+	theme.withMedia({
+		width: ['70%', '75%', '50%'],
+	})
+);
 
 export const CustomMenuItems = () => {
 	useEffect(() => {
@@ -50,6 +58,14 @@ export const CustomMenuItems = () => {
 `}
 					</code>
 				</pre>
+			</Section>
+			<Section>
+				<div style={{ marginBottom: '10px' }}>
+					You will see update Account Menu:
+				</div>
+				<div>
+					<AccountMenuExample src={AccountMenu} alt="Account menu example"/>
+				</div>
 			</Section>
 		</>
 	);

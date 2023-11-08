@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const Section = styled.div<{ border?: boolean }>(({ theme, border }) =>
+export const Section = styled.div<{ border?: boolean, withBackground?: boolean }>(({ theme, border, withBackground }) =>
 	theme.withMedia({
 		display: 'flex',
 		flexDirection: 'column',
-		backgroundColor: 'unset',
+		backgroundColor: withBackground ? theme.sectionBackground: 'unset',
 		width: '100%',
 		margin: '0 0 24px',
-		padding: border ? '8px' : 0,
+		padding: withBackground ? '20px' : 0,
 		border: border ? `1px solid` : 'none',
 		borderColor: theme.contentPrimary,
 		h2: {

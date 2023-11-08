@@ -7,7 +7,7 @@ export const accountMenuItems = [
 	<AccountMenuItem
 		key={2}
 		onClick={() => {
-			window.location.href = 'https://docs.cspr.click';
+			window.open('https://docs.cspr.click', '_blank');
 		}}
 		icon={CSPRClickIcon}
 		label={'CSPR.click docs'}

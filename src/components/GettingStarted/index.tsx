@@ -6,7 +6,7 @@ import Container from '../container';
 const LandingBrief = () => {
 	return (
 		<Container>
-			<h2>✨ Multiple wallets integration</h2>
+			<h3>✨ Multiple wallets integration</h3>
 			<Section>
 				<span>This project template comes with full support for multiple wallets:</span>
 				<ul>
@@ -27,7 +27,7 @@ const LandingBrief = () => {
 				</span>
 			</Section>
 
-			<h2>⚙️ Uniform UI/UX</h2>
+			<h3>⚙️ Uniform UI/UX</h3>
 			<Section>
 				<span>
 					CSPR.click UI components provide a common UX across different Casper apps for an easy management of accounts,
@@ -41,7 +41,7 @@ const LandingBrief = () => {
 				</span>
 			</Section>
 
-			<h2>🔝 Sign in</h2>
+			<h3>🔝 Sign in</h3>
 			<Section>
 				<span>
 					Now, go back to the top of the page and sign in with your favorite wallet. Or, click here:
@@ -64,30 +64,40 @@ const LandingBrief = () => {
 const SignedInBrief = () => {
 	return (
 		<Container>
-			<h2 style={{ marginTop: '48px' }}>🎉 Awesome! Your user has signed in! What next?</h2>
+			<h3>🎉 Awesome! You have successfully signed in! What&#39;s next?</h3>
 			<Section>
-				<span>
-					You&apos;re almost ready to start working on your app. But first, let&apos;s see a couple of features in the
-					SDK you&apos;ll use often.
+				<span style={{ padding: '10px' }}>
+					Be sure that on this page you&#39;ll find all information you need for future integration.
+					Before you&apos;ll jump into development process, please scroll down and get familiar with each section.
+					Below you&#39;ll find some useful code snipped with explanation and easy integration examples about most important features in the
+					SDK which you&apos;ll use frequently.
 				</span>
 			</Section>
-			<h3>🪝️ useClickRef hook</h3>
+			<Section>
+				<ol type="1">
+					<li><a href="#useRef">useClickRef hook</a></li>
+					<li><a href="#account">Get your user´s account and update your app</a></li>
+					<li><a href="#customising">Customize the account menu</a></li>
+					<li><a href="#buyCoffee">Buy Alice a coffee on testnet</a></li>
+				</ol>
+			</Section>
+			<h3 id="useRef">🪝️ useClickRef hook</h3>
 			<UseClickRefHook />
-			<h3>🆔 Get your user´s account and update your app</h3>
+			<h3 id="account">🆔 Get access to your user account</h3>
 			<Account />
-			<h3>🔧 Customize the account menu</h3>
+			<h3 id="customising">🔧 Customize the account menu</h3>
 			<CustomMenuItems />
-			<h3>☕ Buy Alice a coffee on testnet</h3>
+			<h3 id="buyCoffee">☕ Buy Alice a coffee on testnet</h3>
 			<BuyMeACoffee />
 			<h3>🔥 Happy hacking!</h3>
 			<Section>
 				<span>
 					Finally! Time to focus on your new project! And, remember, you may find guides and examples in{' '}
-					<a href={'https://docs.cspr.click'} target={'_blank'} rel='noreferrer'>
+					<a style={{textDecoration: 'underline'}} href={'https://docs.cspr.click'} target={'_blank'} rel='noreferrer'>
 						our documentation
 					</a>
 					. Or you can reach to us on{' '}
-					<a href={'https://t.me/CSPRDevelopers'} target={'_blank'} rel='noreferrer'>
+					<a style={{textDecoration: 'underline'}} href={'https://t.me/CSPRDevelopers'} target={'_blank'} rel='noreferrer'>
 						telegram
 					</a>
 					.
