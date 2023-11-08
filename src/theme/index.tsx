@@ -13,6 +13,7 @@ export const AppTheme = {
         fillPrimaryBlue: '#8FA6FF',
         linkColor: 'rgb(218, 220, 229)',
         containerBackground: '#2d2d2d',
+        codeColor: '#D9D9D9',
     },
     light: {
         ...CsprClickThemes.light,
@@ -27,5 +28,6 @@ export const AppTheme = {
         fillPrimaryBlue: '#0021A5',
         linkColor: 'rgb(26, 25, 25)',
         containerBackground: '#2d2d2d',
+        codeColor: '#737373',
     },
 };

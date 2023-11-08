@@ -27,6 +27,9 @@ const Container = styled.div(({ theme }) =>
 		},
 		pre: {
 			background: theme.backgroundPrimary,
+			code: {
+				color: theme.codeColor,
+			}
 		},
 		button: {
 			background: theme.contentPrimary,
